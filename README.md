@@ -13,7 +13,7 @@ TO Run it on Arch Linux and it's flavours:
 ```
 sudo pacman -S lua
 curl -o https://raw.githubusercontent.com/oxygen-OSS/orkan/main/releases/orkan-1.0stable.lua
-lua orkan.lua
+lua orkan1.0stable.lua
 ```
 
 ## OLDER RELEASE:
