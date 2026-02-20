@@ -13,49 +13,54 @@ local GLib = lgi.GLib
 -- ============================================================================
 -- CSS Styling (Dark Theme)
 -- ============================================================================
-
 local CSS = [[
+/* Baseline */
+* {
+    background-color: #050810;
+    color: #7a9ac4;
+}
+
 /* Main Window */
 window {
-    background-color: #1e1e2e;
+    background-color: #050810;
 }
 
 /* Notebook Tabs */
 notebook header tabs tab {
-    background-color: #313244;
-    color: #a6adc8;
+    background-color: #0a0f1a;
+    color: #7a9ac4;
     padding: 6px 18px;
     margin: 1px;
     border-radius: 6px 6px 0 0;
-    border: 1px solid #45475a;
+    border: 1px solid #0a0f1a;
     border-bottom: none;
 }
 notebook header tabs tab:checked {
-    background-color: #89b4fa;
-    color: #1e1e2e;
+    background-color: #1a3a6b;
+    color: #a8c4f0;
     font-weight: bold;
 }
 notebook header tabs tab:hover {
-    background-color: #45475a;
-    color: #cdd6f4;
+    background-color: #0f1e36;
+    color: #a8c4f0;
 }
 notebook header {
-    background-color: #181825;
+    background-color: #050810;
 }
 notebook stack {
-    background-color: #1e1e2e;
-    border: 1px solid #313244;
+    background-color: #050810;
+    border: 1px solid #0a0f1a;
 }
 
 /* Group Frames */
 frame {
-    border: 1px solid #313244;
+    border: 1px solid #0a0f1a;
     border-radius: 8px;
-    background-color: #181825;
+    background-color: #050810;
     padding: 6px;
 }
 frame > label {
-    color: #89b4fa;
+    color: #2a5caa;
     font-weight: bold;
     font-size: 13px;
 }
@@ -63,47 +68,129 @@ frame > label {
 /* Buttons */
 .item-btn {
     background-image: none;
-    background-color: #313244;
-    color: #cdd6f4;
-    border: 1px solid #45475a;
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+    border: 1px solid #0a0f1a;
     border-radius: 6px;
     padding: 6px 10px;
     min-height: 20px;
     transition: 200ms ease;
 }
 .item-btn:hover {
-    background-color: #45475a;
-    border-color: #585b70;
+    background-color: #0f1e36;
 }
 .item-btn:active {
-    background-color: #89b4fa;
-    color: #1e1e2e;
+    background-color: #1a3a6b;
+    color: #a8c4f0;
 }
 
 /* Log Area */
+.log-view {
+    background-color: #0a0f1a;
+}
 .log-view text {
-    background-color: #11111b;
-    color: #a6adc8;
+    background-color: #0a0f1a;
+    color: #7a9ac4;
     font-family: Monospace;
 }
 
 /* Labels */
 label {
-    color: #cdd6f4;
+    color: #7a9ac4;
 }
 
 /* Scrollbar */
 scrollbar slider {
-    background-color: #45475a;
+    background-color: #0a0f1a;
     border-radius: 4px;
     min-width: 6px;
     min-height: 6px;
 }
 scrollbar slider:hover {
-    background-color: #585b70;
+    background-color: #0f1e36;
 }
 scrollbar trough {
-    background-color: #181825;
+    background-color: #050810;
+}
+
+/* Containers */
+box, grid, stack, viewport, scrolledwindow {
+    background-color: #050810;
+}
+
+/* Text / Entry */
+textview {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+}
+textview text {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+}
+entry {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+    border: 1px solid #0a0f1a;
+}
+entry selection {
+    background-color: #1a3a6b;
+}
+
+/* Dropdowns */
+combobox button {
+    background-color: #0a0f1a;
+    border: 1px solid #0a0f1a;
+}
+
+/* Menus */
+menu {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+    border: 1px solid #0a0f1a;
+}
+menuitem:hover {
+    background-color: #0f1e36;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+    border: 1px solid #0a0f1a;
+}
+
+/* Tree/List Views */
+treeview {
+    background-color: #050810;
+    color: #7a9ac4;
+}
+treeview:selected {
+    background-color: #1a3a6b;
+    color: #a8c4f0;
+}
+treeview header button {
+    background-color: #0a0f1a;
+    color: #7a9ac4;
+    border: 1px solid #0a0f1a;
+}
+.item-btn label {
+    background-color: transparent;
+}
+
+button label {
+    background-color: transparent;
+}
+
+button box {
+    background-color: transparent;
+}
+notebook header tabs tab label {
+    background-color: transparent;
+}
+tab label,
+button label,
+.item-btn label {
+    background-color: transparent;
 }
 ]]
 
