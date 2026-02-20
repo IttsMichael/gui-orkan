@@ -16,61 +16,57 @@ local GLib = lgi.GLib
 local CSS = [[
 /* Baseline */
 * {
-    background-color: #050810;
-    color: #7a9ac4;
+    background-color: #020508;
+    color: #c8d8f0;
 }
-
 /* Main Window */
 window {
-    background-color: #050810;
+    background-color: #020508;
 }
-
 /* Notebook Tabs */
 notebook header tabs tab {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
+    background-color: #0d1520;
+    color: #c8d8f0;
     padding: 6px 18px;
     margin: 1px;
     border-radius: 6px 6px 0 0;
-    border: 1px solid #0a0f1a;
+    border: 1px solid #1a2744;
     border-bottom: none;
 }
 notebook header tabs tab:checked {
     background-color: #1a3a6b;
-    color: #a8c4f0;
+    color: #e8f0ff;
     font-weight: bold;
 }
 notebook header tabs tab:hover {
     background-color: #0f1e36;
-    color: #a8c4f0;
+    color: #e8f0ff;
 }
 notebook header {
-    background-color: #050810;
+    background-color: #020508;
 }
 notebook stack {
-    background-color: #050810;
-    border: 1px solid #0a0f1a;
+    background-color: #020508;
+    border: 1px solid #1a2744;
 }
-
 /* Group Frames */
 frame {
-    border: 1px solid #0a0f1a;
+    border: 1px solid #1a2744;
     border-radius: 8px;
-    background-color: #050810;
+    background-color: #020508;
     padding: 6px;
 }
 frame > label {
-    color: #2a5caa;
+    color: #4a7fd4;
     font-weight: bold;
     font-size: 13px;
 }
-
 /* Buttons */
 .item-btn {
     background-image: none;
-    background-color: #0a0f1a;
-    color: #7a9ac4;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    color: #c8d8f0;
+    border: 1px solid #1a2744;
     border-radius: 6px;
     padding: 6px 10px;
     min-height: 20px;
@@ -78,118 +74,99 @@ frame > label {
 }
 .item-btn:hover {
     background-color: #0f1e36;
+    border-color: #2a4a7f;
 }
 .item-btn:active {
     background-color: #1a3a6b;
-    color: #a8c4f0;
+    color: #e8f0ff;
 }
-
 /* Log Area */
 .log-view {
-    background-color: #0a0f1a;
+    background-color: #0d1520;
 }
 .log-view text {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
+    background-color: #0d1520;
+    color: #c8d8f0;
     font-family: Monospace;
 }
-
 /* Labels */
 label {
-    color: #7a9ac4;
+    color: #c8d8f0;
 }
-
 /* Scrollbar */
 scrollbar slider {
-    background-color: #0a0f1a;
+    background-color: #1a2744;
     border-radius: 4px;
     min-width: 6px;
     min-height: 6px;
 }
 scrollbar slider:hover {
-    background-color: #0f1e36;
+    background-color: #2a4a7f;
 }
 scrollbar trough {
-    background-color: #050810;
+    background-color: #020508;
 }
-
 /* Containers */
 box, grid, stack, viewport, scrolledwindow {
-    background-color: #050810;
+    background-color: #020508;
 }
-
 /* Text / Entry */
 textview {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
+    background-color: #0d1520;
+    color: #c8d8f0;
 }
 textview text {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
+    background-color: #0d1520;
+    color: #c8d8f0;
 }
 entry {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    color: #c8d8f0;
+    border: 1px solid #1a2744;
 }
 entry selection {
     background-color: #1a3a6b;
 }
-
 /* Dropdowns */
 combobox button {
-    background-color: #0a0f1a;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    border: 1px solid #1a2744;
 }
-
 /* Menus */
 menu {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    color: #c8d8f0;
+    border: 1px solid #1a2744;
 }
 menuitem:hover {
     background-color: #0f1e36;
 }
-
 /* Tooltips */
 tooltip {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    color: #c8d8f0;
+    border: 1px solid #1a2744;
 }
-
 /* Tree/List Views */
 treeview {
-    background-color: #050810;
-    color: #7a9ac4;
+    background-color: #020508;
+    color: #c8d8f0;
 }
 treeview:selected {
     background-color: #1a3a6b;
-    color: #a8c4f0;
+    color: #e8f0ff;
 }
 treeview header button {
-    background-color: #0a0f1a;
-    color: #7a9ac4;
-    border: 1px solid #0a0f1a;
+    background-color: #0d1520;
+    color: #c8d8f0;
+    border: 1px solid #1a2744;
 }
-.item-btn label {
-    background-color: transparent;
-}
-
-button label {
-    background-color: transparent;
-}
-
-button box {
-    background-color: transparent;
-}
-notebook header tabs tab label {
-    background-color: transparent;
-}
-tab label,
+/* Transparent label fixes */
+.item-btn label,
 button label,
-.item-btn label {
+button box,
+notebook header tabs tab label,
+tab label {
     background-color: transparent;
 }
 ]]
